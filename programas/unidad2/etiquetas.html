@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>102 Etiquetas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 3px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>102 Etiquetas HTML</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la Etiqueta</th>
+                <th>Descripción</th>
+                <th>Ejemplo de Uso</th>
+                <th>Notas Adicionales</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;html&gt;</code></td>
+                <td>Define el inicio de un documento HTML y contiene todos los demás elementos HTML.</td>
+                <td>
+                    <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </td>
+                <td>Es la etiqueta raíz de cualquier documento HTML.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;head&gt;</code></td>
+                <td>Contiene metadatos/información sobre el documento, como el título, enlaces a hojas de estilo, scripts, etc.</td>
+                <td>
+                    <pre><code>&lt;head&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+                </td>
+                <td>Los elementos dentro de &lt;head&gt; no se muestran directamente en la página.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;title&gt;</code></td>
+                <td>Define el título del documento, que se muestra en la pestaña del navegador.</td>
+                <td>
+                    <pre><code>&lt;title&gt;Mi primera página web&lt;/title&gt;</code></pre>
+                </td>
+                <td>Es importante para el SEO y la accesibilidad.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;body&gt;</code></td>
+                <td>Contiene el contenido principal del documento HTML, como texto, imágenes, enlaces, etc.</td>
+                <td>
+                    <pre><code>&lt;body&gt;
+    &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                </td>
+                <td>Todo el contenido visible de la página debe estar dentro de &lt;body&gt;.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;h1&gt; a &lt;h6&gt;</code></td>
+                <td>Representan encabezados o títulos, donde &lt;h1&gt; es el más importante y &lt;h6&gt; el menos importante.</td>
+                <td>
+                    <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Sub-subtítulo&lt;/h3&gt;</code></pre>
+                </td>
+                <td>Usa solo un &lt;h1&gt; por página para mejorar el SEO.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>Define un párrafo de texto.</td>
+                <td>
+                    <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</code></pre>
+                </td>
+                <td>Los párrafos se separan automáticamente con un margen.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Define un hipervínculo o enlace a otra página o recurso.</td>
+                <td>
+                    <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo.com&lt;/a&gt;</code></pre>
+                </td>
+                <td>El atributo <code>href</code> especifica la URL del enlace.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Inserta una imagen en la página.</td>
+                <td>
+                    <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+                </td>
+                <td>El atributo <code>alt</code> es importante para la accesibilidad.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;ul&gt;</code></td>
+                <td>Define una lista desordenada (con viñetas).</td>
+                <td>
+                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </td>
+                <td>Usa &lt;li&gt; para cada elemento de la lista.</td>
+            </tr>
+
+            <tr>
+                <td><code>&lt;ol&gt;</code></td>
+                <td>Define una lista ordenada (con números).</td>
+                <td>
+                    <pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer elemento&lt;/li&gt;
+    &lt;li&gt;Segundo elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </td>
+                <td>Similar a &lt;ul&gt;, pero los elementos están numerados.</td>
+            </tr>
+
+                            <tr>
+                                <td><code>&lt;li&gt;</code></td>
+                                <td>Define un elemento de una lista, ya sea ordenada (&lt;ol&gt;) o desordenada (&lt;ul&gt;).</td>
+                                <td>
+                                    <pre><code>&lt;ul&gt;
+                    &lt;li&gt;Elemento 1&lt;/li&gt;
+                    &lt;li&gt;Elemento 2&lt;/li&gt;
+                &lt;/ul&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;ul&gt; o &lt;ol&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;div&gt;</code></td>
+                                <td>Define una sección o contenedor genérico en un documento HTML.</td>
+                                <td>
+                                    <pre><code>&lt;div&gt;
+                    &lt;p&gt;Este es un párrafo dentro de un div.&lt;/p&gt;
+                &lt;/div&gt;</code></pre>
+                                </td>
+                                <td>Se usa comúnmente para agrupar elementos y aplicar estilos.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;span&gt;</code></td>
+                                <td>Define una sección en línea dentro de un texto.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;span style="color: red;"&gt;texto en rojo&lt;/span&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Útil para aplicar estilos a partes específicas de un texto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;table&gt;</code></td>
+                                <td>Define una tabla en HTML.</td>
+                                <td>
+                                    <pre><code>&lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Nombre&lt;/th&gt;
+                        &lt;th&gt;Edad&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Juan&lt;/td&gt;
+                        &lt;td&gt;25&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con &lt;tr&gt;, &lt;th&gt;, y &lt;td&gt; para crear filas y celdas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;tr&gt;</code></td>
+                                <td>Define una fila en una tabla.</td>
+                                <td>
+                                    <pre><code>&lt;tr&gt;
+                    &lt;td&gt;Dato 1&lt;/td&gt;
+                    &lt;td&gt;Dato 2&lt;/td&gt;
+                &lt;/tr&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;table&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;td&gt;</code></td>
+                                <td>Define una celda de datos en una tabla.</td>
+                                <td>
+                                    <pre><code>&lt;td&gt;Contenido de la celda&lt;/td&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;tr&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;th&gt;</code></td>
+                                <td>Define una celda de encabezado en una tabla.</td>
+                                <td>
+                                    <pre><code>&lt;th&gt;Nombre&lt;/th&gt;</code></pre>
+                                </td>
+                                <td>Se usa para resaltar los encabezados de las columnas o filas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;form&gt;</code></td>
+                                <td>Define un formulario para recopilar datos del usuario.</td>
+                                <td>
+                                    <pre><code>&lt;form action="/submit" method="post"&gt;
+                    &lt;input type="text" name="nombre"&gt;
+                    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con elementos como &lt;input&gt;, &lt;button&gt;, etc.</td>
+                            </tr>
+                                            <tr>
+                                <td><code>&lt;input&gt;</code></td>
+                                <td>Define un campo de entrada para que el usuario ingrese datos.</td>
+                                <td>
+                                    <pre><code>&lt;input type="text" name="nombre" placeholder="Ingresa tu nombre"&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>type</code> define el tipo de entrada (texto, contraseña, etc.).</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;button&gt;</code></td>
+                                <td>Define un botón en el que el usuario puede hacer clic.</td>
+                                <td>
+                                    <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre>
+                                </td>
+                                <td>Puede usarse dentro de formularios o de manera independiente.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;label&gt;</code></td>
+                                <td>Define una etiqueta para un elemento de formulario.</td>
+                                <td>
+                                    <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                &lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
+                                </td>
+                                <td>Mejora la accesibilidad al asociar texto con un campo de entrada.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;textarea&gt;</code></td>
+                                <td>Define un área de texto multilínea para que el usuario ingrese datos.</td>
+                                <td>
+                                    <pre><code>&lt;textarea name="comentario" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+                                </td>
+                                <td>Útil para comentarios o descripciones largas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;select&gt;</code></td>
+                                <td>Define una lista desplegable de opciones.</td>
+                                <td>
+                                    <pre><code>&lt;select name="color"&gt;
+                    &lt;option value="rojo"&gt;Rojo&lt;/option&gt;
+                    &lt;option value="verde"&gt;Verde&lt;/option&gt;
+                &lt;/select&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con &lt;option&gt; para definir las opciones.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;option&gt;</code></td>
+                                <td>Define una opción en una lista desplegable (&lt;select&gt;).</td>
+                                <td>
+                                    <pre><code>&lt;option value="rojo"&gt;Rojo&lt;/option&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;select&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;header&gt;</code></td>
+                                <td>Define la cabecera de una sección o página.</td>
+                                <td>
+                                    <pre><code>&lt;header&gt;
+                    &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
+                &lt;/header&gt;</code></pre>
+                                </td>
+                                <td>Útil para agrupar elementos introductorios.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;footer&gt;</code></td>
+                                <td>Define el pie de página de una sección o página.</td>
+                                <td>
+                                    <pre><code>&lt;footer&gt;
+                    &lt;p&gt;Derechos reservados &copy; 2023&lt;/p&gt;
+                &lt;/footer&gt;</code></pre>
+                                </td>
+                                <td>Comúnmente usado para información de contacto o derechos de autor.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;nav&gt;</code></td>
+                                <td>Define una sección de navegación con enlaces.</td>
+                                <td>
+                                    <pre><code>&lt;nav&gt;
+                    &lt;a href="/inicio"&gt;Inicio&lt;/a&gt;
+                    &lt;a href="/contacto"&gt;Contacto&lt;/a&gt;
+                &lt;/nav&gt;</code></pre>
+                                </td>
+                                <td>Útil para menús de navegación.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;section&gt;</code></td>
+                                <td>Define una sección temática en un documento.</td>
+                                <td>
+                                    <pre><code>&lt;section&gt;
+                    &lt;h2&gt;Sobre mí&lt;/h2&gt;
+                    &lt;p&gt;Información sobre mí.&lt;/p&gt;
+                &lt;/section&gt;</code></pre>
+                                </td>
+                                <td>Ayuda a estructurar el contenido de manera semántica.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;article&gt;</code></td>
+                                <td>Define contenido independiente y autónomo, como una publicación o noticia.</td>
+                                <td>
+                                    <pre><code>&lt;article&gt;
+                    &lt;h2&gt;Título del artículo&lt;/h2&gt;
+                    &lt;p&gt;Contenido del artículo.&lt;/p&gt;
+                &lt;/article&gt;</code></pre>
+                                </td>
+                                <td>Útil para blogs, foros o noticias.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;aside&gt;</code></td>
+                                <td>Define contenido relacionado indirectamente con el contenido principal.</td>
+                                <td>
+                                    <pre><code>&lt;aside&gt;
+                    &lt;p&gt;Este es un contenido adicional.&lt;/p&gt;
+                &lt;/aside&gt;</code></pre>
+                                </td>
+                                <td>Comúnmente usado para barras laterales.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>&lt;main&gt;</code></td>
+                                <td>Define el contenido principal de un documento.</td>
+                                <td>
+                                    <pre><code>&lt;main&gt;
+                    &lt;h1&gt;Título principal&lt;/h1&gt;
+                    &lt;p&gt;Contenido principal.&lt;/p&gt;
+                &lt;/main&gt;</code></pre>
+                                </td>
+                                <td>Debe ser único en la página.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;figure&gt;</code></td>
+                                <td>Define contenido independiente, como imágenes o diagramas.</td>
+                                <td>
+                                    <pre><code>&lt;figure&gt;
+                    &lt;img src="imagen.jpg" alt="Descripción"&gt;
+                    &lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;
+                &lt;/figure&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con &lt;figcaption&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;figcaption&gt;</code></td>
+                                <td>Define una leyenda para un elemento &lt;figure&gt;.</td>
+                                <td>
+                                    <pre><code>&lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;figure&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;time&gt;</code></td>
+                                <td>Define una fecha o hora.</td>
+                                <td>
+                                    <pre><code>&lt;time datetime="2023-10-05"&gt;5 de octubre de 2023&lt;/time&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>datetime</code> especifica la fecha en formato máquina.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;mark&gt;</code></td>
+                                <td>Resalta texto con un fondo amarillo.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Útil para enfatizar partes del texto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;small&gt;</code></td>
+                                <td>Define texto en un tamaño más pequeño.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;small&gt;texto pequeño&lt;/small&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Comúnmente usado para notas legales o derechos de autor.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;strong&gt;</code></td>
+                                <td>Define texto con importancia semántica fuerte.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;strong&gt;texto importante&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en negrita por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;em&gt;</code></td>
+                                <td>Define texto con énfasis semántico.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;em&gt;texto enfatizado&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en cursiva por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;blockquote&gt;</code></td>
+                                <td>Define una cita larga de otra fuente.</td>
+                                <td>
+                                    <pre><code>&lt;blockquote&gt;
+                    &lt;p&gt;Esta es una cita larga de otra fuente.&lt;/p&gt;
+                &lt;/blockquote&gt;</code></pre>
+                                </td>
+                                <td>Se usa para citas extensas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;q&gt;</code></td>
+                                <td>Define una cita corta en línea.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Él dijo: &lt;q&gt;Esto es una cita corta.&lt;/q&gt;&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra entre comillas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;cite&gt;</code></td>
+                                <td>Define el título de una obra, como un libro o película.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;&lt;cite&gt;El Principito&lt;/cite&gt; es un libro famoso.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en cursiva por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;abbr&gt;</code></td>
+                                <td>Define una abreviatura o acrónimo.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;La &lt;abbr title="Organización de las Naciones Unidas"&gt;ONU&lt;/abbr&gt; es importante.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>title</code> muestra la descripción completa.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;code&gt;</code></td>
+                                <td>Define un fragmento de código.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Usa &lt;code&gt;console.log()&lt;/code&gt; para imprimir en la consola.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en una fuente monoespaciada.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;pre&gt;</code></td>
+                                <td>Define texto preformateado.</td>
+                                <td>
+                                    <pre><code>&lt;pre&gt;
+                    Este texto
+                    conserva los espacios
+                    y saltos de línea.
+                &lt;/pre&gt;</code></pre>
+                                </td>
+                                <td>Útil para mostrar código o texto con formato específico.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;iframe&gt;</code></td>
+                                <td>Inserta un marco que muestra otra página web.</td>
+                                <td>
+                                    <pre><code>&lt;iframe src="https://www.ejemplo.com" width="300" height="200"&gt;&lt;/iframe&gt;</code></pre>
+                                </td>
+                                <td>Útil para incrustar contenido externo.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;audio&gt;</code></td>
+                                <td>Inserta un archivo de audio.</td>
+                                <td>
+                                    <pre><code>&lt;audio controls&gt;
+                    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                    Tu navegador no soporta audio.
+                &lt;/audio&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>controls</code> muestra los controles de reproducción.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;video&gt;</code></td>
+                                <td>Inserta un archivo de video.</td>
+                                <td>
+                                    <pre><code>&lt;video controls width="320" height="240"&gt;
+                    &lt;source src="video.mp4" type="video/mp4"&gt;
+                    Tu navegador no soporta video.
+                &lt;/video&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>controls</code> muestra los controles de reproducción.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;canvas&gt;</code></td>
+                                <td>Define un área para gráficos renderizados dinámicamente.</td>
+                                <td>
+                                    <pre><code>&lt;canvas id="miCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></pre>
+                                </td>
+                                <td>Se usa con JavaScript para dibujar gráficos.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;svg&gt;</code></td>
+                                <td>Define gráficos vectoriales escalables.</td>
+                                <td>
+                                    <pre><code>&lt;svg width="100" height="100"&gt;
+                    &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+                &lt;/svg&gt;</code></pre>
+                                </td>
+                                <td>Útil para gráficos y animaciones.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;details&gt;</code></td>
+                                <td>Define un widget de detalles que el usuario puede expandir o contraer.</td>
+                                <td>
+                                    <pre><code>&lt;details&gt;
+                    &lt;summary&gt;Más información&lt;/summary&gt;
+                    &lt;p&gt;Este es el contenido adicional.&lt;/p&gt;
+                &lt;/details&gt;</code></pre>
+                                </td>
+                                <td>Útil para secciones colapsables.</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;main&gt;</code></td>
+                                <td>Define el contenido principal de un documento.</td>
+                                <td>
+                                    <pre><code>&lt;main&gt;
+                    &lt;h1&gt;Título principal&lt;/h1&gt;
+                    &lt;p&gt;Contenido principal.&lt;/p&gt;
+                &lt;/main&gt;</code></pre>
+                                </td>
+                                <td>Debe ser único en la página.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;figure&gt;</code></td>
+                                <td>Define contenido independiente, como imágenes o diagramas.</td>
+                                <td>
+                                    <pre><code>&lt;figure&gt;
+                    &lt;img src="imagen.jpg" alt="Descripción"&gt;
+                    &lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;
+                &lt;/figure&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con &lt;figcaption&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;figcaption&gt;</code></td>
+                                <td>Define una leyenda para un elemento &lt;figure&gt;.</td>
+                                <td>
+                                    <pre><code>&lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;figure&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;time&gt;</code></td>
+                                <td>Define una fecha o hora.</td>
+                                <td>
+                                    <pre><code>&lt;time datetime="2023-10-05"&gt;5 de octubre de 2023&lt;/time&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>datetime</code> especifica la fecha en formato máquina.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;mark&gt;</code></td>
+                                <td>Resalta texto con un fondo amarillo.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Útil para enfatizar partes del texto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;small&gt;</code></td>
+                                <td>Define texto en un tamaño más pequeño.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;small&gt;texto pequeño&lt;/small&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Comúnmente usado para notas legales o derechos de autor.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;strong&gt;</code></td>
+                                <td>Define texto con importancia semántica fuerte.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;strong&gt;texto importante&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en negrita por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;em&gt;</code></td>
+                                <td>Define texto con énfasis semántico.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;em&gt;texto enfatizado&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en cursiva por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;blockquote&gt;</code></td>
+                                <td>Define una cita larga de otra fuente.</td>
+                                <td>
+                                    <pre><code>&lt;blockquote&gt;
+                    &lt;p&gt;Esta es una cita larga de otra fuente.&lt;/p&gt;
+                &lt;/blockquote&gt;</code></pre>
+                                </td>
+                                <td>Se usa para citas extensas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;q&gt;</code></td>
+                                <td>Define una cita corta en línea.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Él dijo: &lt;q&gt;Esto es una cita corta.&lt;/q&gt;&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra entre comillas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;cite&gt;</code></td>
+                                <td>Define el título de una obra, como un libro o película.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;&lt;cite&gt;El Principito&lt;/cite&gt; es un libro famoso.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en cursiva por defecto.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;abbr&gt;</code></td>
+                                <td>Define una abreviatura o acrónimo.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;La &lt;abbr title="Organización de las Naciones Unidas"&gt;ONU&lt;/abbr&gt; es importante.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>title</code> muestra la descripción completa.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;code&gt;</code></td>
+                                <td>Define un fragmento de código.</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Usa &lt;code&gt;console.log()&lt;/code&gt; para imprimir en la consola.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Se muestra en una fuente monoespaciada.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;pre&gt;</code></td>
+                                <td>Define texto preformateado.</td>
+                                <td>
+                                    <pre><code>&lt;pre&gt;
+                    Este texto
+                    conserva los espacios
+                    y saltos de línea.
+                &lt;/pre&gt;</code></pre>
+                                </td>
+                                <td>Útil para mostrar código o texto con formato específico.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;iframe&gt;</code></td>
+                                <td>Inserta un marco que muestra otra página web.</td>
+                                <td>
+                                    <pre><code>&lt;iframe src="https://www.ejemplo.com" width="300" height="200"&gt;&lt;/iframe&gt;</code></pre>
+                                </td>
+                                <td>Útil para incrustar contenido externo.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;audio&gt;</code></td>
+                                <td>Inserta un archivo de audio.</td>
+                                <td>
+                                    <pre><code>&lt;audio controls&gt;
+                    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                    Tu navegador no soporta audio.
+                &lt;/audio&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>controls</code> muestra los controles de reproducción.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;video&gt;</code></td>
+                                <td>Inserta un archivo de video.</td>
+                                <td>
+                                    <pre><code>&lt;video controls width="320" height="240"&gt;
+                    &lt;source src="video.mp4" type="video/mp4"&gt;
+                    Tu navegador no soporta video.
+                &lt;/video&gt;</code></pre>
+                                </td>
+                                <td>El atributo <code>controls</code> muestra los controles de reproducción.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;canvas&gt;</code></td>
+                                <td>Define un área para gráficos renderizados dinámicamente.</td>
+                                <td>
+                                    <pre><code>&lt;canvas id="miCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></pre>
+                                </td>
+                                <td>Se usa con JavaScript para dibujar gráficos.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;svg&gt;</code></td>
+                                <td>Define gráficos vectoriales escalables.</td>
+                                <td>
+                                    <pre><code>&lt;svg width="100" height="100"&gt;
+                    &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+                &lt;/svg&gt;</code></pre>
+                                </td>
+                                <td>Útil para gráficos y animaciones.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;details&gt;</code></td>
+                                <td>Define un widget de detalles que el usuario puede expandir o contraer.</td>
+                                <td>
+                                    <pre><code>&lt;details&gt;
+                    &lt;summary&gt;Más información&lt;/summary&gt;
+                    &lt;p&gt;Este es el contenido adicional.&lt;/p&gt;
+                &lt;/details&gt;</code></pre>
+                                </td>
+                                <td>Útil para secciones colapsables.</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;map&gt;</code></td>
+                                <td>Define un mapa de imagen con áreas clickeables.</td>
+                                <td>
+                                    <pre><code>&lt;img src="imagen.jpg" usemap="#mapa"&gt;
+                &lt;map name="mapa"&gt;
+                    &lt;area shape="rect" coords="0,0,50,50" href="enlace1.html"&gt;
+                    &lt;area shape="circle" coords="100,100,50" href="enlace2.html"&gt;
+                &lt;/map&gt;</code></pre>
+                                </td>
+                                <td>Se usa junto con &lt;area&gt; para definir áreas clickeables.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;area&gt;</code></td>
+                                <td>Define un área clickeable dentro de un mapa de imagen.</td>
+                                <td>
+                                    <pre><code>&lt;area shape="rect" coords="0,0,50,50" href="enlace1.html"&gt;</code></pre>
+                                </td>
+                                <td>Debe estar dentro de &lt;map&gt;.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;col&gt;</code></td>
+                                <td>Define propiedades de columna en una tabla.</td>
+                                <td>
+                                    <pre><code>&lt;colgroup&gt;
+                    &lt;col style="background-color: yellow;"&gt;
+                    &lt;col style="background-color: blue;"&gt;
+                &lt;/colgroup&gt;</code></pre>
+                                </td>
+                                <td>Se usa dentro de &lt;colgroup&gt; para aplicar estilos a columnas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;colgroup&gt;</code></td>
+                                <td>Agrupa columnas en una tabla para aplicar estilos.</td>
+                                <td>
+                                    <pre><code>&lt;colgroup&gt;
+                    &lt;col style="background-color: yellow;"&gt;
+                    &lt;col style="background-color: blue;"&gt;
+                &lt;/colgroup&gt;</code></pre>
+                                </td>
+                                <td>Útil para aplicar estilos a múltiples columnas.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;optgroup&gt;</code></td>
+                                <td>Agrupa opciones en un menú desplegable.</td>
+                                <td>
+                                    <pre><code>&lt;select&gt;
+                    &lt;optgroup label="Frutas"&gt;
+                        &lt;option&gt;Manzana&lt;/option&gt;
+                        &lt;option&gt;Plátano&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label="Verduras"&gt;
+                        &lt;option&gt;Zanahoria&lt;/option&gt;
+                        &lt;option&gt;Lechuga&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                &lt;/select&gt;</code></pre>
+                                </td>
+                                <td>Útil para organizar opciones en grupos.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;keygen&gt;</code></td>
+                                <td>Genera un par de claves para formularios (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;keygen name="clave"&gt;</code></pre>
+                                </td>
+                                <td>Ya no se recomienda su uso.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;isindex&gt;</code></td>
+                                <td>Define un campo de búsqueda en una página (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;isindex prompt="Buscar:"&gt;</code></pre>
+                                </td>
+                                <td>Ya no se recomienda su uso.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;basefont&gt;</code></td>
+                                <td>Define la fuente base para el documento (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;basefont color="red" size="4"&gt;</code></pre>
+                                </td>
+                                <td>Ya no se recomienda su uso.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;applet&gt;</code></td>
+                                <td>Inserta un applet de Java (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;applet code="MiApplet.class" width="200" height="200"&gt;&lt;/applet&gt;</code></pre>
+                                </td>
+                                <td>Ya no se recomienda su uso.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;acronym&gt;</code></td>
+                                <td>Define un acrónimo (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;acronym title="Organización de las Naciones Unidas"&gt;ONU&lt;/acronym&gt;</code></pre>
+                                </td>
+                                <td>Reemplazado por &lt;abbr&gt; en HTML5.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;strike&gt;</code></td>
+                                <td>Define texto tachado (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;strike&gt;texto tachado&lt;/strike&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Reemplazado por &lt;s&gt; o &lt;del&gt; en HTML5.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;big&gt;</code></td>
+                                <td>Define texto en un tamaño más grande (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;p&gt;Este es un &lt;big&gt;texto grande&lt;/big&gt;.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>Ya no se recomienda su uso.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;center&gt;</code></td>
+                                <td>Centra el contenido horizontalmente (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;center&gt;Este texto está centrado.&lt;/center&gt;</code></pre>
+                                </td>
+                                <td>Reemplazado por CSS (<code>text-align: center</code>).</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;dir&gt;</code></td>
+                                <td>Define una lista de directorios (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;dir&gt;
+                    &lt;li&gt;Archivo1&lt;/li&gt;
+                    &lt;li&gt;Archivo2&lt;/li&gt;
+                &lt;/dir&gt;</code></pre>
+                                </td>
+                                <td>Reemplazado por &lt;ul&gt; en HTML5.</td>
+                            </tr>
+                
+                            <tr>
+                                <td><code>&lt;font&gt;</code></td>
+                                <td>Define el tipo, tamaño y color de la fuente (obsoleto en HTML5).</td>
+                                <td>
+                                    <pre><code>&lt;font color="red" size="4"&gt;Este texto es rojo.&lt;/font&gt;</code></pre>
+                                </td>
+                                <td>Reemplazado por CSS.</td>
+                            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
