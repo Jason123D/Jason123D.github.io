@@ -1,0 +1,36 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "nombre": "Inicio",
+      "enlace": "/inicio"
+    },
+    {
+      "id": 2,
+      "nombre": "Sobre Nosotros",
+      "enlace": "/sobre-nosotros"
+    },
+    {
+      "id": 3,
+      "nombre": "Servicios",
+      "enlace": "/servicios",
+      "submenu": [
+        {
+          "id": 31,
+          "nombre": "Diseño Web",
+          "enlace": "/servicios/diseno-web"
+        },
+        {
+          "id": 32,
+          "nombre": "Marketing Digital",
+          "enlace": "/servicios/marketing-digital"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Contacto",
+      "enlace": "/contacto"
+    }
+  ]
+}
