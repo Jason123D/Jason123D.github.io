@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico Simple de Ventas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #002868;
+    }
+
+    .navbar-brand {
+      color: white;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #CE1126;
+    }
+
+    .btn-primary {
+      background-color: #CE1126;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #a50d1f;
+    }
+
+    canvas {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Gráfico de Ventas 🇩🇴</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="mb-3">Crea tu gráfico rápido</h2>
+
+    <!-- Paso 1: Cantidad -->
+    <div id="paso1" class="mb-4">
+      <label for="numCols" class="form-label">¿Cuántas columnas quieres?</label>
+      <input type="number" class="form-control w-25" id="numCols" min="1" required>
+      <button class="btn btn-primary mt-2" onclick="generarInputs()">Siguiente</button>
+    </div>
+
+    <!-- Paso 2: Valores -->
+    <div id="paso2" class="mb-4" style="display:none;">
+      <form id="valoresForm">
+        <h5>Paso 2: Ingresa los valores</h5>
+        <div id="valoresInputs" class="row"></div>
+        <button type="submit" class="btn btn-primary mt-3">Generar gráfico</button>
+      </form>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="graficoVentas" height="100"></canvas>
+  </div>
+
+  <script>
+    let cantidad = 0;
+    let etiquetas = [];
+    const paso2 = document.getElementById("paso2");
+    const ctx = document.getElementById('graficoVentas').getContext('2d');
+    let chart;
+
+    function generarInputs() {
+      cantidad = parseInt(document.getElementById("numCols").value);
+      etiquetas = [];
+      const valoresDiv = document.getElementById("valoresInputs");
+      valoresDiv.innerHTML = "";
+
+      for (let i = 0; i < cantidad; i++) {
+        etiquetas.push(`Columna ${i + 1}`);
+        valoresDiv.innerHTML += `
+          <div class="col-md-3 mb-3">
+            <label>${etiquetas[i]}</label>
+            <input type="number" class="form-control valor-campo" placeholder="Valor" required>
+          </div>`;
+      }
+      paso2.style.display = "block";
+    }
+
+    document.getElementById("valoresForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const valores = Array.from(document.querySelectorAll('.valor-campo')).map(el => parseFloat(el.value));
+
+      if (chart) chart.destroy();
+
+      chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: etiquetas,
+          datasets: [{
+            label: 'Datos ingresados (RD$)',
+            data: valores,
+            backgroundColor: '#002868',
+            borderColor: '#CE1126',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
