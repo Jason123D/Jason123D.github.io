@@ -1,0 +1,16 @@
+
+.nav-link-yellow {
+    color: yellow !important;
+}
+
+.services-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.card {
+    background-color: transparent; 
+    border: lightblue; 
+    color: white; 
+}
+
