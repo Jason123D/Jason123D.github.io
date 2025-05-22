@@ -73,20 +73,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                 
-                    $servidor = "localhost";
-                    $user = "root";
-                    $contra = "";
-                    $dbnombre = "gimnasio";
+                   <?php
+                    $servidor = "sql313.infinityfree.com";
+                    $user = "if0_39004148";
+                    $contra = "tu_contraseña_aquí"; // reemplaza esto con tu contraseña real
+                    $dbnombre = "if0_39004148_gimnasio";
 
-                 
                     $conn = new mysqli($servidor, $user, $contra, $dbnombre);
 
-                    // VIENDO SI LA CONEXION SE HIZO
                     if ($conn->connect_error) {
                         die("Conexión fallida: " . $conn->connect_error);
                     }
+                    
 
     
                     $sql = "select * FROM clientes";

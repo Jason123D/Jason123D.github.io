@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú Dinámico – Proyecto Final</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5; }
+    h1 { margin-bottom: 20px; }
+    .menu-item {
+      display: block;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menú de Ejercicios – Proyecto Final</h1>
+  <div id="menu"></div>
+
+  <script>
+  const ejercicios = [
+    { nombre: "Unidad 1 – Web Personal en HTML", url: "https://jason123d.github.io/programas/unidad1/index.html" },
+    { nombre: "Unidad 2 – Plain, con su Biografía", url: "https://jason123d.github.io/programas/unidad2/index.html" },
+    { nombre: "Unidad 2 – Etiquetas_Unidad2", url: "https://jason123d.github.io/programas/Etiquetas_Unidad2/etiquetas.html" },
+    { nombre: "Unidad 3 – Página del Banco de Reservas", url: "https://jason123d.github.io/programas/unidad3/Banreserva.html" },
+    { nombre: "Unidad 4 – Programas Modulares", url: "https://jason123d.github.io/programas/Unidad4/index.html" },
+    { nombre: "Unidad 4 – Crear Menú Dinámico", url: "https://jason123d.github.io/programas/unidad_4/index.html" },
+    { nombre: "Unidad 5 – Múltiples Páginas", url: "https://jason123d.github.io/programas/unidad5/index.html" },
+    { nombre: "Unidad 4 – Programas Modulares (QR)", url: "https://jason123d.github.io/programas/QR/index.html" },
+    { nombre: "Unidad 4 – Gráficos", url: "https://jason123d.github.io/programas/graficos/graficos.html" },
+    { nombre: "Formulario Clientes SayaGym", url: "https://formularioclientesayayim.42web.io/index.php" },
+    { nombre: "Cédula Forever", url: "http://cedulaforever.42web.io/" }
+  ];
+
+  const menu = document.getElementById("menu");
+
+  ejercicios.forEach(ej => {
+    const link = document.createElement("a");
+    link.href = ej.url;
+    link.textContent = ej.nombre;
+    link.className = "menu-item";
+    link.target = "_blank";
+    menu.appendChild(link);
+  });
+</script>
+
+</body>
+</html>
+
+    
